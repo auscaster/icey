@@ -35,7 +35,7 @@ source = changes.read_text()
 latest = re.search(r"^- Update icey to ([0-9]+\.[0-9]+\.[0-9]+)$", source, re.M)
 if not latest or latest.group(1) != version:
     entry = ("-------------------------------------------------------------------\n"
-             f"{release_day:%a %b %d} 00:00:00 UTC {release_day:%Y} - 0state OSS <oss@0state.com>\n\n"
+             f"{release_day:%a %b %d} 00:00:00 UTC {release_day:%Y} - auscaster OSS <oss@0state.com>\n\n"
              f"- Update icey to {version}\n\n")
     changes.write_text(entry + source)
 
@@ -52,7 +52,7 @@ if not re.match(rf"icey \({re.escape(version)}-1\) ", source):
     if count != 1:
         raise SystemExit("expected one Debian changelog header")
     stamp = release_day.strftime("%a, %d %b %Y 00:00:00 +0000")
-    source, count = re.subn(r"^ -- .*?$", f" -- 0state OSS <oss@0state.com>  {stamp}", source, count=1, flags=re.M)
+    source, count = re.subn(r"^ -- .*?$", f" -- auscaster OSS <oss@0state.com>  {stamp}", source, count=1, flags=re.M)
     if count != 1:
         raise SystemExit("expected one Debian changelog signature")
     debian.write_text(source)

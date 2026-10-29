@@ -30,11 +30,11 @@ if [[ -z "$remote_tag_commit" && "$require_remote_tag" == "1" ]]; then
     exit 1
 fi
 
-release_archive_url="https://github.com/nilstate/icey/archive/refs/tags/${version}.tar.gz"
+release_archive_url="https://github.com/auscaster/icey/archive/refs/tags/${version}.tar.gz"
 release_archive_sha256=""
 release_archive_sha512=""
 
-macports_archive_url="https://github.com/nilstate/icey/archive/${version}/icey-${version}.tar.gz"
+macports_archive_url="https://github.com/auscaster/icey/archive/${version}/icey-${version}.tar.gz"
 macports_archive_rmd160=""
 macports_archive_sha256=""
 macports_archive_size=""

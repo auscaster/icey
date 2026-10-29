@@ -11,9 +11,9 @@ class IceyConan(ConanFile):
     name = "icey"
     package_type = "library"
     license = "LGPL-2.1-or-later"
-    author = "0state OSS <oss@0state.com>"
+    author = "auscaster OSS <oss@0state.com>"
     url = "https://github.com/conan-io/conan-center-index"
-    homepage = "https://0state.com/icey/"
+    homepage = "https://auscaster.com/icey/"
     description = "C++20 media stack and libwebrtc alternative for real-time video, signalling, TURN, and media servers"
     topics = ("networking", "webrtc", "ffmpeg", "media", "http", "websocket", "stun", "turn", "c++20")
 

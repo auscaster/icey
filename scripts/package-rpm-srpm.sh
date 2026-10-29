@@ -13,7 +13,7 @@ fi
 rpmbuild_bin="${RPMBUILD:-rpmbuild}"
 stage_root="${ICEY_RPM_STAGE_DIR:-$repo_root/build/package/rpm}"
 topdir="$stage_root/rpmbuild"
-archive_url="https://github.com/nilstate/icey/archive/refs/tags/${version}.tar.gz"
+archive_url="https://github.com/auscaster/icey/archive/refs/tags/${version}.tar.gz"
 source_archive="$topdir/SOURCES/icey-${version}.tar.gz"
 spec_file="$repo_root/packaging/rpm/icey.spec"
 

@@ -49,7 +49,7 @@ If you want the shortest path from zero to browser video, use the published `ice
 One command. One URL. One click.
 
 ```bash
-docker run --rm --network host 0state/icey-server:latest
+docker run --rm --network host ghcr.io/auscaster/icey-server:latest
 ```
 
 Then open `http://localhost:4500` and click `Watch` on the `icey` peer.
@@ -218,7 +218,7 @@ ctest --test-dir build --output-on-failure
 include(FetchContent)
 FetchContent_Declare(icey
   GIT_REPOSITORY https://github.com/auscaster/icey.git
-  GIT_TAG 2.5.1
+  GIT_TAG 2.5.2
 )
 FetchContent_MakeAvailable(icey)
 target_link_libraries(myapp PRIVATE icey::base icey::net icey::http)

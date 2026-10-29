@@ -7,13 +7,13 @@ class Icey(CMakePackage):
     """C++20 media stack and libwebrtc alternative for real-time video,
     signalling, TURN, and media servers."""
 
-    homepage = "https://0state.com/icey/"
-    url = "https://github.com/nilstate/icey/archive/refs/tags/2.5.1.tar.gz"
-    git = "https://github.com/nilstate/icey.git"
+    homepage = "https://auscaster.com/icey/"
+    url = "https://github.com/auscaster/icey/archive/refs/tags/2.5.2.tar.gz"
+    git = "https://github.com/auscaster/icey.git"
 
     license("LGPL-2.1-or-later")
 
-    version("2.5.1", sha256="@RELEASE_ARCHIVE_SHA256@")
+    version("2.5.2", sha256="@RELEASE_ARCHIVE_SHA256@")
 
     depends_on("c", type="build")
     depends_on("cxx", type="build")

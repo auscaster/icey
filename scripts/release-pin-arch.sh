@@ -30,7 +30,7 @@ fi
 perl -0pi -e 's/^pkgver=\d+\.\d+\.\d+$/pkgver='"$version"'/m' packaging/arch/PKGBUILD
 perl -0pi -e "s#^sha256sums=\\('[^']+'\\)\$#sha256sums=('${RELEASE_ARCHIVE_SHA256}')#m" packaging/arch/PKGBUILD
 perl -0pi -e 's/^[[:space:]]*pkgver = \d+\.\d+\.\d+$/\tpkgver = '"$version"'/m' packaging/arch/.SRCINFO
-perl -0pi -e 's#^[[:space:]]*source = [^[:space:]]+$#\tsource = icey-'"$version"'.tar.gz::https://github.com/nilstate/icey/archive/refs/tags/'"$version"'.tar.gz#m' packaging/arch/.SRCINFO
+perl -0pi -e 's#^[[:space:]]*source = [^[:space:]]+$#\tsource = icey-'"$version"'.tar.gz::https://github.com/auscaster/icey/archive/refs/tags/'"$version"'.tar.gz#m' packaging/arch/.SRCINFO
 perl -0pi -e 's/^[[:space:]]*sha256sums = \S+$/\tsha256sums = '"$RELEASE_ARCHIVE_SHA256"'/m' packaging/arch/.SRCINFO
 
 echo "updated packaging/arch/PKGBUILD for $version"

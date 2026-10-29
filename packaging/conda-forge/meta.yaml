@@ -1,12 +1,12 @@
 {% set name = "icey" %}
-{% set version = "2.5.1" %}
+{% set version = "2.5.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/nilstate/icey/archive/refs/tags/{{ version }}.tar.gz
+  url: https://github.com/auscaster/icey/archive/refs/tags/{{ version }}.tar.gz
   sha256: @RELEASE_ARCHIVE_SHA256@
 
 build:
@@ -37,7 +37,7 @@ test:
     - test -f ${PREFIX}/lib/pkgconfig/icey.pc  # [unix]
 
 about:
-  home: https://0state.com/icey/
+  home: https://auscaster.com/icey/
   summary: C++20 media stack and libwebrtc alternative for real-time video, signalling, TURN, and media servers
   description: |
     icey is a modular C++20 media stack and libwebrtc alternative for
@@ -46,8 +46,8 @@ about:
     until libdatachannel packaging is standardized there.
   license: LGPL-2.1-or-later
   license_file: LICENSE.md
-  dev_url: https://github.com/nilstate/icey
-  doc_url: https://0state.com/icey/docs
+  dev_url: https://github.com/auscaster/icey
+  doc_url: https://auscaster.com/icey/docs
 
 extra:
   recipe-maintainers:

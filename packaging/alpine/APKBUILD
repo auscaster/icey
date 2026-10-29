@@ -1,10 +1,10 @@
 # Contributor: 0state OSS <oss@0state.com>
-# Maintainer: 0state OSS <oss@0state.com>
+# Maintainer: auscaster OSS <oss@0state.com>
 pkgname=icey
-pkgver=2.5.1
+pkgver=2.5.2
 pkgrel=0
 pkgdesc="C++20 media stack and libwebrtc alternative for real-time video, signalling, TURN, and media servers"
-url="https://0state.com/icey/"
+url="https://auscaster.com/icey/"
 arch="all"
 license="LGPL-2.1-or-later"
 options="!check"
@@ -23,7 +23,7 @@ makedepends="
 	zlib-dev
 "
 subpackages="$pkgname-dev"
-source="$pkgname-$pkgver.tar.gz::https://github.com/nilstate/icey/archive/refs/tags/$pkgver.tar.gz"
+source="$pkgname-$pkgver.tar.gz::https://github.com/auscaster/icey/archive/refs/tags/$pkgver.tar.gz"
 
 build() {
 	cmake -G Ninja -B build -S "$builddir" \
@@ -53,5 +53,5 @@ package() {
 		"$pkgdir/usr/share/licenses/$pkgname/LICENSE.md"
 }
 sha512sums="
-@RELEASE_ARCHIVE_SHA512@  icey-2.5.1.tar.gz
+@RELEASE_ARCHIVE_SHA512@  icey-2.5.2.tar.gz
 "

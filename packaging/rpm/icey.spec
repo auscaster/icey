@@ -1,11 +1,11 @@
 Name:           icey
-Version:        2.5.1
+Version:        2.5.2
 Release:        1%{?dist}
 Summary:        C++20 media stack and libwebrtc alternative for real-time video, signalling, TURN, and media servers
 
 License:        LGPL-2.1-or-later
-URL:            https://0state.com/icey/
-Source0:        https://github.com/nilstate/icey/archive/refs/tags/%{version}.tar.gz#/%{name}-%{version}.tar.gz
+URL:            https://auscaster.com/icey/
+Source0:        https://github.com/auscaster/icey/archive/refs/tags/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
 BuildRequires:  cmake
 BuildRequires:  gcc-c++

@@ -1,6 +1,6 @@
 # icey-sys
 
-Raw Rust FFI bindings for [icey](https://0state.com/icey).
+Raw Rust FFI bindings for [icey](https://auscaster.com/icey).
 
 This crate is the generated `bindgen` layer over icey's graft C ABI. Most Rust
 users should depend on the safe `icey` crate instead.
@@ -17,9 +17,9 @@ edits are reflected immediately.
 
 ## Resources
 
-- Product: https://0state.com/icey
-- Documentation: https://0state.com/icey/docs
-- Source: https://github.com/nilstate/icey
+- Product: https://auscaster.com/icey
+- Documentation: https://auscaster.com/icey/docs
+- Source: https://github.com/auscaster/icey
 - Rust crate: https://crates.io/crates/icey
 - Raw sys crate: https://crates.io/crates/icey-sys
 

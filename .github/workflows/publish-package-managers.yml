@@ -74,7 +74,7 @@ jobs:
         if: steps.gate.outputs.publish == 'true'
         uses: actions/checkout@v7
         with:
-          repository: nilstate/homebrew-tap
+          repository: auscaster/homebrew-tap
           token: ${{ secrets.HOMEBREW_TAP_TOKEN }}
           path: .stage/homebrew-tap
 

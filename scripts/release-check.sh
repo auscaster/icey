@@ -50,13 +50,13 @@ grep -Eq '^    version = "'"$version"'"$' packaging/conan/conanfile.py \
     || fail "packaging/conan/conanfile.py is not synced to $version"
 grep -Eq '^  "'"$version"'":$' packaging/conan/conandata.yml \
     || fail "packaging/conan/conandata.yml is not synced to $version"
-grep -Eq '^    url: "https://github.com/nilstate/icey/archive/refs/tags/'"$version"'.tar.gz"$' packaging/conan/conandata.yml \
+grep -Eq '^    url: "https://github.com/auscaster/icey/archive/refs/tags/'"$version"'.tar.gz"$' packaging/conan/conandata.yml \
     || fail "packaging/conan/conandata.yml source URL is not synced to $version"
 grep -Fqx '    sha256: "'"$release_sha256"'"' packaging/conan/conandata.yml \
     || fail "packaging/conan/conandata.yml sha256 does not match the live release archive"
 grep -Eq '^  "'"$version"'":$' packaging/conan-center-index/recipes/icey/all/conandata.yml \
     || fail "packaging/conan-center-index/recipes/icey/all/conandata.yml is not synced to $version"
-grep -Eq '^    url: "https://github.com/nilstate/icey/archive/refs/tags/'"$version"'.tar.gz"$' packaging/conan-center-index/recipes/icey/all/conandata.yml \
+grep -Eq '^    url: "https://github.com/auscaster/icey/archive/refs/tags/'"$version"'.tar.gz"$' packaging/conan-center-index/recipes/icey/all/conandata.yml \
     || fail "packaging/conan-center-index/recipes/icey/all/conandata.yml source URL is not synced to $version"
 grep -Fqx '    sha256: "'"$release_sha256"'"' packaging/conan-center-index/recipes/icey/all/conandata.yml \
     || fail "packaging/conan-center-index/recipes/icey/all/conandata.yml sha256 does not match the live release archive"
@@ -72,11 +72,11 @@ grep -Eq '^[[:space:]]*pkgver = '"$version"'$' packaging/arch/.SRCINFO \
     || fail "packaging/arch/.SRCINFO is not synced to $version"
 grep -Eq '^[[:space:]]*pkgrel = 1$' packaging/arch/.SRCINFO \
     || fail "packaging/arch/.SRCINFO should reset pkgrel = 1 for a new release"
-grep -Eq '^[[:space:]]*source = icey-'"$version"'.tar.gz::https://github.com/nilstate/icey/archive/refs/tags/'"$version"'.tar.gz$' packaging/arch/.SRCINFO \
+grep -Eq '^[[:space:]]*source = icey-'"$version"'.tar.gz::https://github.com/auscaster/icey/archive/refs/tags/'"$version"'.tar.gz$' packaging/arch/.SRCINFO \
     || fail "packaging/arch/.SRCINFO source URL is not synced to $version"
 grep -Eq '^[[:space:]]*sha256sums = '"$release_sha256"'$' packaging/arch/.SRCINFO \
     || fail "packaging/arch/.SRCINFO sha256 does not match the live release archive"
-grep -Eq '^  url "https://github.com/nilstate/icey/archive/refs/tags/'"$version"'.tar.gz"$' packaging/homebrew/Formula/icey.rb \
+grep -Eq '^  url "https://github.com/auscaster/icey/archive/refs/tags/'"$version"'.tar.gz"$' packaging/homebrew/Formula/icey.rb \
     || fail "packaging/homebrew/Formula/icey.rb source URL is not synced to $version"
 grep -Eq '^  version "'"$version"'"$' packaging/homebrew/Formula/icey.rb \
     || fail "packaging/homebrew/Formula/icey.rb is not synced to $version"
@@ -101,7 +101,7 @@ grep -Eq '^pkgver='"$version"'$' packaging/alpine/APKBUILD \
     || fail "packaging/alpine/APKBUILD is not synced to $version"
 grep -Fqx "$release_sha512  icey-$version.tar.gz" packaging/alpine/APKBUILD \
     || fail "packaging/alpine/APKBUILD sha512 does not match the live release archive"
-grep -Eq '^github.setup[[:space:]]+nilstate[[:space:]]+icey[[:space:]]+'"${version}"'$' packaging/macports/Portfile \
+grep -Eq '^github.setup[[:space:]]+auscaster[[:space:]]+icey[[:space:]]+'"${version}"'$' packaging/macports/Portfile \
     || fail "packaging/macports/Portfile is not synced to $version"
 grep -Eq '^checksums[[:space:]]+rmd160[[:space:]]+'"${macports_rmd160}"' \\$' packaging/macports/Portfile \
     || fail "packaging/macports/Portfile rmd160 does not match the live MacPorts archive"
@@ -111,7 +111,7 @@ grep -Eq '^[[:space:]]+size[[:space:]]+'"${macports_size}"'$' packaging/macports
     || fail "packaging/macports/Portfile size does not match the live MacPorts archive"
 grep -Fqx '    version("'"$version"'", sha256="'"$release_sha256"'")' packaging/spack/package.py \
     || fail "packaging/spack/package.py sha256 does not match the live release archive"
-grep -Fqx '    url = "https://github.com/nilstate/icey/archive/refs/tags/'"$version"'.tar.gz"' packaging/spack/package.py \
+grep -Fqx '    url = "https://github.com/auscaster/icey/archive/refs/tags/'"$version"'.tar.gz"' packaging/spack/package.py \
     || fail "packaging/spack/package.py URL is not synced to $version"
 grep -Eq '^\{\% set version = "'"$version"'" \%\}$' packaging/conda-forge/meta.yaml \
     || fail "packaging/conda-forge/meta.yaml is not synced to $version"

@@ -1,6 +1,6 @@
 # icey
 
-Rust bindings for [icey](https://0state.com/icey), a C++ media
+Rust bindings for [icey](https://auscaster.com/icey), a C++ media
 runtime: WebRTC, FFmpeg, and async networking in one toolkit. No Google
 monolith. No dependency hell. No fighting three build systems to get a frame
 on screen.
@@ -42,13 +42,13 @@ cargo run -p icey --example rtsp_to_browser -- \
 
 ## Resources
 
-- Product: https://0state.com/icey
-- Documentation: https://0state.com/icey/docs
-- Source: https://github.com/nilstate/icey
+- Product: https://auscaster.com/icey
+- Documentation: https://auscaster.com/icey/docs
+- Source: https://github.com/auscaster/icey
 - Rust crate: https://crates.io/crates/icey
 - Raw sys crate: https://crates.io/crates/icey-sys
-- Releases: https://github.com/nilstate/icey/releases
-- Docker: `docker run --rm --network host 0state/icey-server:latest`
+- Releases: https://github.com/auscaster/icey/releases
+- Docker: `docker run --rm --network host ghcr.io/auscaster/icey-server:latest`
 
 ## License
 
