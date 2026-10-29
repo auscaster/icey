@@ -123,4 +123,4 @@ This is not meant to be a generic signalling demo. It is the concrete "stream H.
 - [WebRTC guide](../modules/webrtc.md) for the full module surface
 - [Runtime Contracts](../concepts/runtime-contracts.md) for buffer and loop rules
 - [PacketStream](../concepts/packetstream.md) for the pipeline model
-- [`webcam-streamer`](https://github.com/nilstate/icey/tree/main/src/webrtc/samples/webcam-streamer/) for the runnable sample
+- [`webcam-streamer`](https://github.com/auscaster/icey/tree/main/src/webrtc/samples/webcam-streamer/) for the runnable sample

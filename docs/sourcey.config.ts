@@ -2,11 +2,11 @@ import { defineConfig, doxygen, markdown } from "sourcey";
 
 export default defineConfig({
   name: "icey",
-  siteUrl: "https://0state.com",
+  siteUrl: "https://auscaster.com",
   baseUrl: "/icey/docs",
   prettyUrls: "strip",
   logo: { light: "./icey.png", mark: true },
-  repo: "https://github.com/nilstate/icey",
+  repo: "https://github.com/auscaster/icey",
   editBranch: "main",
   editBasePath: "docs",
   theme: {
@@ -104,13 +104,13 @@ export default defineConfig({
           index: "rich",
           sourceUrl: [
             { prefix: "src/graft/" },
-            { prefix: "", url: "https://github.com/nilstate/icey/blob/main/{fullPath}" },
+            { prefix: "", url: "https://github.com/auscaster/icey/blob/main/{fullPath}" },
           ],
         }),
       },
     ],
   },
   navbar: {
-    links: [{ type: "github", href: "https://github.com/nilstate/icey" }],
+    links: [{ type: "github", href: "https://github.com/auscaster/icey" }],
   },
 });

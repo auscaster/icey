@@ -2,7 +2,7 @@
 
 > ZIP archive reading and extraction
 
-**[API Reference →](../api/archo.md)** · **[Source →](https://github.com/nilstate/icey/tree/main/src/archo/)**
+**[API Reference →](../api/archo.md)** · **[Source →](https://github.com/auscaster/icey/tree/main/src/archo/)**
 
 ## Overview
 

@@ -31,4 +31,4 @@ Use the server's `scripts/check-distribution.py --strict` for owned-channel drif
 
 - [Install](run/install.md)
 - [Contributing](contributing.md)
-- [Repository README](https://github.com/nilstate/icey/blob/main/README.md)
+- [Repository README](https://github.com/auscaster/icey/blob/main/README.md)

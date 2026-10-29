@@ -2,7 +2,7 @@
 
 > Video intelligence primitives for sampled decoded frames.
 
-**[Source →](https://github.com/nilstate/icey/tree/main/src/vision/)** · **CMake target:** `icey::vision`
+**[Source →](https://github.com/auscaster/icey/tree/main/src/vision/)** · **CMake target:** `icey::vision`
 
 ## Overview
 

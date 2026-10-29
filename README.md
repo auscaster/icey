@@ -1,8 +1,8 @@
 # icey
 
-[Project homepage](https://0state.com/icey)
+[Project homepage](https://auscaster.com/icey)
 
-[![CI](https://github.com/nilstate/icey/actions/workflows/ci.yml/badge.svg)](https://github.com/nilstate/icey/actions/workflows/ci.yml)
+[![CI](https://github.com/auscaster/icey/actions/workflows/ci.yml/badge.svg)](https://github.com/auscaster/icey/actions/workflows/ci.yml)
 [![License: LGPL-2.1+](https://img.shields.io/badge/license-LGPL--2.1%2B-blue.svg)](LICENSE.md)
 
 > The C++ Media Stack
@@ -36,14 +36,11 @@ Rust bindings are split into two crates:
 - [`icey-sys`](https://crates.io/crates/icey-sys) is the raw `bindgen` layer
   over icey's graft C ABI.
 
-Both crates use `https://0state.com/icey` as their Cargo homepage and
-`https://0state.com/icey/docs` as their Cargo documentation URL so crates.io,
-docs.rs, lib.rs, Libraries.io, and other registry crawlers resolve the Rust
-package listings back to the product and docs surfaces.
+Project and API documentation is available at [auscaster.com/icey/docs](https://auscaster.com/icey/docs).
 
 ## Fastest Path
 
-Icey is the C++ library. [Icey Server](https://github.com/nilstate/icey-server)
+Icey is the C++ library. [Icey Server](https://github.com/auscaster/icey-server)
 is the runnable product built on it; its executable and packages are named
 `icey-server`.
 
@@ -57,7 +54,7 @@ docker run --rm --network host 0state/icey-server:latest
 
 Then open `http://localhost:4500` and click `Watch` on the `icey` peer.
 
-This express path ships from `nilstate/icey-server` and starts `stream` mode with the bundled demo source. If you want the repo-backed app path for local edits or richer runtime control, use the separate `icey-server` app surface on top of the core `icey` modules.
+This express path ships from `auscaster/icey-server` and starts `stream` mode with the bundled demo source. If you want the repo-backed app path for local edits or richer runtime control, use the separate `icey-server` app surface on top of the core `icey` modules.
 
 ## Why icey
 
@@ -134,7 +131,7 @@ session.StateChanged += [&](wrtc::PeerSession::State state) {
 };
 ```
 
-See [src/webrtc/samples/webcam-streamer/](src/webrtc/samples/webcam-streamer/) or read [WebRTC in 150 Lines of C++](https://0state.com/writing/webrtc-in-150-lines-of-cpp).
+See [src/webrtc/samples/webcam-streamer/](src/webrtc/samples/webcam-streamer/) or read [WebRTC in 150 Lines of C++](https://auscaster.com/writing/webrtc-in-150-lines-of-cpp).
 
 ### Record a browser's camera server-side
 
@@ -208,7 +205,7 @@ System dependencies such as OpenSSL 3.x, FFmpeg 5+/6+/7+, and OpenCV 3.0+ are au
 ### Build from source
 
 ```bash
-git clone https://github.com/nilstate/icey.git
+git clone https://github.com/auscaster/icey.git
 cd icey
 cmake -B build -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTS=ON
 cmake --build build --parallel $(nproc)
@@ -220,7 +217,7 @@ ctest --test-dir build --output-on-failure
 ```cmake
 include(FetchContent)
 FetchContent_Declare(icey
-  GIT_REPOSITORY https://github.com/nilstate/icey.git
+  GIT_REPOSITORY https://github.com/auscaster/icey.git
   GIT_TAG 2.5.1
 )
 FetchContent_MakeAvailable(icey)

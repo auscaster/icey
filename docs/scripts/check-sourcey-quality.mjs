@@ -134,7 +134,7 @@ if (!graftPages.length) {
   if (!graftHtml.includes("Defined in src/graft/include/icy/graft/graft.h:")) {
     fail("graft page is missing plain source locations");
   }
-  if (graftHtml.includes("github.com/nilstate/icey/blob/main/src/graft/")) {
+  if (graftHtml.includes("github.com/auscaster/icey/blob/main/src/graft/")) {
     fail("graft page contains public source links for the graft submodule");
   }
 }
@@ -146,7 +146,7 @@ for (const marker of ["#### Parameters", "#### Template Parameters", "#### Excep
   }
 }
 
-const linkedSourceUrls = [...combinedApi.matchAll(/https:\/\/github\.com\/nilstate\/icey\/blob\/main\/([^"#]+)(?:#L(\d+))?/g)];
+const linkedSourceUrls = [...combinedApi.matchAll(/https:\/\/github\.com\/auscaster\/icey\/blob\/main\/([^"#]+)(?:#L(\d+))?/g)];
 for (const [, encodedPath, line] of linkedSourceUrls) {
   const sourcePath = decodeURIComponent(encodedPath);
   if (sourcePath.startsWith("src/graft/")) {

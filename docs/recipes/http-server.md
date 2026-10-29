@@ -160,11 +160,11 @@ icey's HTTP server is fast for a reason:
 
 If you want to compare it properly, the benchmark harness lives under:
 
-- [`src/http/perf/`](https://github.com/nilstate/icey/tree/main/src/http/perf/)
+- [`src/http/perf/`](https://github.com/auscaster/icey/tree/main/src/http/perf/)
 
 The reportable microbenchmarks live under:
 
-- [`src/http/bench/`](https://github.com/nilstate/icey/tree/main/src/http/bench/)
+- [`src/http/bench/`](https://github.com/auscaster/icey/tree/main/src/http/bench/)
 
 That is benchmark infrastructure, not a sample.
 
@@ -172,6 +172,6 @@ That is benchmark infrastructure, not a sample.
 
 - [HTTP guide](../modules/http.md) for the full module surface
 - [HTTP Lifecycle](../concepts/http-lifecycle.md) for keep-alive, streaming, and upgrade rules
-- [`httpechoserver`](https://github.com/nilstate/icey/tree/main/src/http/samples/httpechoserver/) for runnable sample code
-- [`httpperf`](https://github.com/nilstate/icey/tree/main/src/http/perf/) for cross-stack throughput testing
-- [`httpbench`](https://github.com/nilstate/icey/tree/main/src/http/bench/) for HTTP microbenchmarks
+- [`httpechoserver`](https://github.com/auscaster/icey/tree/main/src/http/samples/httpechoserver/) for runnable sample code
+- [`httpperf`](https://github.com/auscaster/icey/tree/main/src/http/perf/) for cross-stack throughput testing
+- [`httpbench`](https://github.com/auscaster/icey/tree/main/src/http/bench/) for HTTP microbenchmarks
