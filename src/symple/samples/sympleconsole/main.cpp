@@ -61,7 +61,7 @@ public:
         std::cout
             << "\nSymple Console Client v0.1.0"
                "\n(c) icey"
-               "\nhttps://0state.com/symple"
+               "\nhttps://auscaster.com/symple"
                "\n"
                "\nGeneral options:"
                "\n  -help           Print help"

@@ -1,6 +1,6 @@
 //! # icey
 //!
-//! Rust bindings for [icey](https://0state.com/icey), a C++ media
+//! Rust bindings for [icey](https://auscaster.com/icey), a C++ media
 //! runtime that brings WebRTC, FFmpeg, and async networking into one toolkit.
 
 use std::ffi::{CStr, CString, NulError};

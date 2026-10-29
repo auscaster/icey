@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## [Unreleased]
 
+## [2.5.2] - 2026-10-29
+
+### Changed
+
+- Update package homepages, source URLs and release generators for auscaster.
+- Publish container images at ghcr.io/auscaster/icey through the release repository identity.
+
 ## [2.5.1] - 2026-10-08
 
 ### Fixed

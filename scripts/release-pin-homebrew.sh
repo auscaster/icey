@@ -27,7 +27,7 @@ else
 fi
 [[ "$RELEASE_VERSION" == "$version" ]] || { echo "release manifest version mismatch" >&2; exit 1; }
 
-perl -0pi -e 's#url "https://github.com/nilstate/icey/archive/refs/tags/\d+\.\d+\.\d+\.tar\.gz"#url "https://github.com/nilstate/icey/archive/refs/tags/'"$version"'.tar.gz"#' packaging/homebrew/Formula/icey.rb
+perl -0pi -e 's#url "https://github.com/auscaster/icey/archive/refs/tags/\d+\.\d+\.\d+\.tar\.gz"#url "https://github.com/auscaster/icey/archive/refs/tags/'"$version"'.tar.gz"#' packaging/homebrew/Formula/icey.rb
 perl -0pi -e 's/version "\d+\.\d+\.\d+"/version "'"$version"'"/' packaging/homebrew/Formula/icey.rb
 perl -0pi -e 's/sha256 "[^"]+"/sha256 "'"$RELEASE_ARCHIVE_SHA256"'"/' packaging/homebrew/Formula/icey.rb
 

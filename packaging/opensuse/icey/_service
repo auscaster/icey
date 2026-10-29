@@ -1,8 +1,8 @@
 <services>
   <service name="obs_scm" mode="manual">
-    <param name="url">https://github.com/nilstate/icey.git</param>
+    <param name="url">https://github.com/auscaster/icey.git</param>
     <param name="scm">git</param>
-    <param name="revision">2.5.1</param>
+    <param name="revision">2.5.2</param>
     <param name="versionformat">@PARENT_TAG@</param>
     <param name="exclude">.git</param>
     <param name="changesgenerate">disable</param>

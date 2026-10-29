@@ -4,8 +4,8 @@ if(DEFINED ENV{ICEY_VCPKG_SOURCE_PATH} AND NOT "$ENV{ICEY_VCPKG_SOURCE_PATH}" ST
 else()
     vcpkg_from_github(
         OUT_SOURCE_PATH SOURCE_PATH
-        REPO nilstate/icey
-        REF "2.5.1"
+        REPO auscaster/icey
+        REF "2.5.2"
         SHA512 @RELEASE_ARCHIVE_SHA512@
         HEAD_REF main
     )

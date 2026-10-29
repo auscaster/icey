@@ -12,7 +12,7 @@ Current build policy:
 - `icey` uses system dependencies
 - FFmpeg stays enabled
 - WebRTC stays disabled until `libdatachannel` is packaged for Factory
-- `icey.spec` already sets `URL: https://0state.com/icey/` so the eventual
+- `icey.spec` already sets `URL: https://auscaster.com/icey/` so the eventual
   package page backlinks to the project site
 
 Source state:

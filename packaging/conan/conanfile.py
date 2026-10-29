@@ -7,12 +7,12 @@ from conan.tools.files import copy, get, rmdir
 
 class iceyConan(ConanFile):
     name = "icey"
-    version = "2.5.1"
+    version = "2.5.2"
     package_type = "library"
     license = "LGPL-2.1-or-later"
-    author = "0state OSS <oss@0state.com>"
-    url = "https://github.com/nilstate/icey"
-    homepage = "https://0state.com/icey/"
+    author = "auscaster OSS <oss@0state.com>"
+    url = "https://github.com/auscaster/icey"
+    homepage = "https://auscaster.com/icey/"
     description = "C++20 media stack and libwebrtc alternative for real-time video, signalling, TURN, and media servers"
     topics = ("networking", "webrtc", "ffmpeg", "media", "http", "websocket", "stun", "turn", "c++20")
 

@@ -1,12 +1,12 @@
 {
   "name": "icey",
-  "version": "2.5.1",
+  "version": "2.5.2",
   "description": "C++20 media stack and libwebrtc alternative for real-time video, signalling, TURN, and media servers",
-  "homepage": "https://0state.com/icey/",
-  "documentation": "https://0state.com/icey/docs",
+  "homepage": "https://auscaster.com/icey/",
+  "documentation": "https://auscaster.com/icey/docs",
   "license": "LGPL-2.1-or-later",
   "maintainers": [
-    "0state OSS <oss@0state.com>"
+    "auscaster OSS <oss@0state.com>"
   ],
   "dependencies": [
     "openssl",

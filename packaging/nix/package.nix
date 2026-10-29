@@ -103,7 +103,7 @@ stdenv.mkDerivation {
 
   meta = with lib; {
     description = "C++20 media stack and libwebrtc alternative for real-time video, signalling, TURN, and media servers";
-    homepage = "https://0state.com/icey/";
+    homepage = "https://auscaster.com/icey/";
     license = licenses.lgpl21Plus;
     platforms = platforms.linux ++ platforms.darwin;
   };

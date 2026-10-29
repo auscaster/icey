@@ -1,7 +1,7 @@
 Source: icey
 Section: libs
 Priority: optional
-Maintainer: 0state OSS <oss@0state.com>
+Maintainer: auscaster OSS <oss@0state.com>
 Rules-Requires-Root: no
 Build-Depends:
  debhelper-compat (= 13),
@@ -19,9 +19,9 @@ Build-Depends:
  libusrsctp-dev,
  nlohmann-json3-dev
 Standards-Version: 4.7.0
-Homepage: https://0state.com/icey/
-Vcs-Browser: https://github.com/nilstate/icey
-Vcs-Git: https://github.com/nilstate/icey.git
+Homepage: https://auscaster.com/icey/
+Vcs-Browser: https://github.com/auscaster/icey
+Vcs-Git: https://github.com/auscaster/icey.git
 
 Package: libicey2
 Section: libs

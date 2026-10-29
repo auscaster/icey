@@ -2,7 +2,7 @@
 #![allow(non_snake_case)]
 #![allow(non_upper_case_globals)]
 #![allow(improper_ctypes)]
-//! Raw FFI bindings for [icey](https://0state.com/icey).
+//! Raw FFI bindings for [icey](https://auscaster.com/icey).
 
 include!(concat!(env!("OUT_DIR"), "/bindings.rs"));
 

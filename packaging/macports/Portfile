@@ -5,14 +5,14 @@ PortGroup           cmake 1.1
 PortGroup           github 1.0
 PortGroup           openssl 1.0
 
-github.setup        nilstate icey 2.5.1
+github.setup        auscaster icey 2.5.2
 github.tarball_from archive
 revision            0
 
 categories          devel multimedia net
 maintainers         nomaintainer
 license             LGPL-2.1+
-homepage            https://0state.com/icey/
+homepage            https://auscaster.com/icey/
 description         C++20 media stack and libwebrtc alternative for real-time video, signalling, TURN, and media servers
 long_description    ${description}
 

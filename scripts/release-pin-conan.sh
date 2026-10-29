@@ -30,7 +30,7 @@ fi
 cat > packaging/conan/conandata.yml <<EOF
 sources:
   "$version":
-    url: "https://github.com/nilstate/icey/archive/refs/tags/$version.tar.gz"
+    url: "https://github.com/auscaster/icey/archive/refs/tags/$version.tar.gz"
     sha256: "$RELEASE_ARCHIVE_SHA256"
 EOF
 
@@ -43,7 +43,7 @@ EOF
 cat > packaging/conan-center-index/recipes/icey/all/conandata.yml <<EOF
 sources:
   "$version":
-    url: "https://github.com/nilstate/icey/archive/refs/tags/$version.tar.gz"
+    url: "https://github.com/auscaster/icey/archive/refs/tags/$version.tar.gz"
     sha256: "$RELEASE_ARCHIVE_SHA256"
 EOF
 

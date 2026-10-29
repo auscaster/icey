@@ -1,7 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: icey
-Upstream-Contact: 0state OSS <oss@0state.com>
-Source: https://github.com/nilstate/icey
+Upstream-Contact: auscaster OSS <oss@0state.com>
+Source: https://github.com/auscaster/icey
 
 Files: *
 Copyright: 2005-2026 0state contributors
