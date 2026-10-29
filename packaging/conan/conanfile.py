@@ -7,7 +7,7 @@ from conan.tools.files import copy, get, rmdir
 
 class iceyConan(ConanFile):
     name = "icey"
-    version = "2.5.2"
+    version = "2.5.3"
     package_type = "library"
     license = "LGPL-2.1-or-later"
     author = "auscaster OSS <oss@0state.com>"

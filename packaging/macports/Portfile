@@ -5,7 +5,7 @@ PortGroup           cmake 1.1
 PortGroup           github 1.0
 PortGroup           openssl 1.0
 
-github.setup        auscaster icey 2.5.2
+github.setup        auscaster icey 2.5.3
 github.tarball_from archive
 revision            0
 

@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## [Unreleased]
 
+## [2.5.3] - 2026-10-29
+
+### Fixed
+
+- Validate the current auscaster homepage when rendering tagged openSUSE recipes.
+
 ## [2.5.2] - 2026-10-29
 
 ### Changed

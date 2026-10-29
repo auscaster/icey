@@ -1,6 +1,6 @@
 {
   "name": "icey",
-  "version": "2.5.2",
+  "version": "2.5.3",
   "description": "C++20 media stack and libwebrtc alternative for real-time video, signalling, TURN, and media servers",
   "homepage": "https://auscaster.com/icey/",
   "documentation": "https://auscaster.com/icey/docs",

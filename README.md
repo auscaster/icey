@@ -218,7 +218,7 @@ ctest --test-dir build --output-on-failure
 include(FetchContent)
 FetchContent_Declare(icey
   GIT_REPOSITORY https://github.com/auscaster/icey.git
-  GIT_TAG 2.5.2
+  GIT_TAG 2.5.3
 )
 FetchContent_MakeAvailable(icey)
 target_link_libraries(myapp PRIVATE icey::base icey::net icey::http)
