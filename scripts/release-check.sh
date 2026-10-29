@@ -95,7 +95,7 @@ grep -Fq '<param name="revision">'"$version"'</param>' packaging/opensuse/icey/_
 obs_latest=$(sed -nE 's/^- Update icey to ([0-9]+\.[0-9]+\.[0-9]+)$/\1/p' packaging/opensuse/icey/icey.changes | head -n 1)
 [[ "$obs_latest" == "$version" ]] \
     || fail "packaging/opensuse/icey/icey.changes is not synced to $version"
-grep -Eq '^URL:[[:space:]]+https://0state\.com/icey/$' packaging/opensuse/icey/icey.spec \
+grep -Eq '^URL:[[:space:]]+https://auscaster\.com/icey/$' packaging/opensuse/icey/icey.spec \
     || fail "packaging/opensuse/icey/icey.spec homepage has drifted"
 grep -Eq '^pkgver='"$version"'$' packaging/alpine/APKBUILD \
     || fail "packaging/alpine/APKBUILD is not synced to $version"

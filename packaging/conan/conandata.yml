@@ -1,4 +1,4 @@
 sources:
-  "2.5.2":
-    url: "https://github.com/auscaster/icey/archive/refs/tags/2.5.2.tar.gz"
+  "2.5.3":
+    url: "https://github.com/auscaster/icey/archive/refs/tags/2.5.3.tar.gz"
     sha256: "@RELEASE_ARCHIVE_SHA256@"

@@ -1,5 +1,5 @@
 pkgname=icey
-pkgver=2.5.2
+pkgver=2.5.3
 pkgrel=1
 pkgdesc='C++20 media stack and libwebrtc alternative for real-time video, signalling, TURN, and media servers'
 arch=('x86_64')

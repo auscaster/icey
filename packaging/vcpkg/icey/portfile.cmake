@@ -5,7 +5,7 @@ else()
     vcpkg_from_github(
         OUT_SOURCE_PATH SOURCE_PATH
         REPO auscaster/icey
-        REF "2.5.2"
+        REF "2.5.3"
         SHA512 @RELEASE_ARCHIVE_SHA512@
         HEAD_REF main
     )

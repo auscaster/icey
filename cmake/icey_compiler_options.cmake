@@ -26,8 +26,9 @@ if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
     $<$<CONFIG:Debug>:-g>
   )
 
-  # Release optimizations: native arch tuning + link-time optimization
-  option(ENABLE_NATIVE_ARCH "Tune for the build machine's CPU (-march=native)" ON)
+  # Published libraries and binaries must run beyond the build machine.
+  # CPU-specific tuning remains available for an explicitly local build.
+  option(ENABLE_NATIVE_ARCH "Tune for the build machine's CPU (-march=native)" OFF)
   if(ENABLE_NATIVE_ARCH)
     add_compile_options($<$<CONFIG:Release>:-march=native>)
     add_compile_options($<$<CONFIG:RelWithDebInfo>:-march=native>)
