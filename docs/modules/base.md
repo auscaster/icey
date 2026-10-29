@@ -2,7 +2,7 @@
 
 > The foundational module: event loop, signals, packet pipelines, logging, and system utilities.
 
-**[API Reference →](../api/base.md)** · **[Source →](https://github.com/nilstate/icey/tree/main/src/base/)**
+**[API Reference →](../api/base.md)** · **[Source →](https://github.com/auscaster/icey/tree/main/src/base/)**
 
 ## Overview
 
@@ -1136,7 +1136,7 @@ To link `icey::base` from a parent CMake project using FetchContent:
 ```cmake
 include(FetchContent)
 FetchContent_Declare(icey
-  GIT_REPOSITORY https://github.com/nilstate/icey.git
+  GIT_REPOSITORY https://github.com/auscaster/icey.git
   GIT_TAG 2.5.1
 )
 FetchContent_MakeAvailable(icey)

@@ -97,10 +97,10 @@ The pages here explain architecture, runtime contracts, workflows, and operation
 
 ## Repository
 
-- [README](https://github.com/nilstate/icey/blob/main/README.md)
+- [README](https://github.com/auscaster/icey/blob/main/README.md)
 - [Contributing](contributing.md)
 - [Repository Conventions](conventions.md)
 - [Releasing](releasing.md)
 - [Rust crate](https://crates.io/crates/icey)
 - [Raw Rust FFI crate](https://crates.io/crates/icey-sys)
-- [Changelog](https://github.com/nilstate/icey/blob/main/CHANGELOG.md)
+- [Changelog](https://github.com/auscaster/icey/blob/main/CHANGELOG.md)

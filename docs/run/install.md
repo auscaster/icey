@@ -29,18 +29,18 @@ docker run --rm --network host \
   0state/icey-server:0.1.1
 ```
 
-For config-file-driven bring-up or direct `icey-server` flags, use a native `icey-server` install or the repo-backed `nilstate/icey-server` source path.
+For config-file-driven bring-up or direct `icey-server` flags, use a native `icey-server` install or the repo-backed `auscaster/icey-server` source path.
 
 ::
 
 ::tab{title="Release Binary"}
 
-Download a prebuilt binary from the [GitHub releases](https://github.com/nilstate/icey-server/releases) page.
+Download a prebuilt binary from the [GitHub releases](https://github.com/auscaster/icey-server/releases) page.
 
 Linux x86_64:
 
 ```bash
-curl -L https://github.com/nilstate/icey-server/releases/latest/download/icey-server-Linux-x86_64.tar.gz \
+curl -L https://github.com/auscaster/icey-server/releases/latest/download/icey-server-Linux-x86_64.tar.gz \
   | tar xz
 cd icey-server-*
 ./bin/icey-server --source /path/to/video.mp4
@@ -55,7 +55,7 @@ The release binary requires OpenSSL and FFmpeg libraries on the host. If you get
 ::tab{title="Homebrew"}
 
 ```bash
-brew install nilstate/tap/icey-server
+brew install auscaster/tap/icey-server
 icey-server --source /path/to/video.mp4
 ```
 
@@ -90,7 +90,7 @@ icey-server --source /path/to/video.mp4
 ::tab{title="Nix"}
 
 ```bash
-nix run github:nilstate/icey-server -- --source /path/to/video.mp4
+nix run github:auscaster/icey-server -- --source /path/to/video.mp4
 ```
 
 ::
@@ -104,8 +104,8 @@ Build `icey-server` against a local icey checkout:
 1. Clone both repos
 
    ```bash
-   git clone https://github.com/nilstate/icey.git
-   git clone https://github.com/nilstate/icey-server.git
+   git clone https://github.com/auscaster/icey.git
+   git clone https://github.com/auscaster/icey-server.git
    ```
 
 2. Build the server
@@ -156,4 +156,4 @@ Both are configurable via CLI flags or config file. See the [CLI reference](cli.
 
 ## Library (For C++ Developers)
 
-If you want to use icey as a library in your own C++ project rather than running the server, the [HTTP Server recipe](../recipes/http-server.md) is the shortest end-to-end example. It covers FetchContent, CMake targets, and linking individual modules. The repository [README](https://github.com/nilstate/icey#quick-start) has the full library quick-start.
+If you want to use icey as a library in your own C++ project rather than running the server, the [HTTP Server recipe](../recipes/http-server.md) is the shortest end-to-end example. It covers FetchContent, CMake targets, and linking individual modules. The repository [README](https://github.com/auscaster/icey#quick-start) has the full library quick-start.

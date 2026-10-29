@@ -2,7 +2,7 @@
 
 > Native ABI contracts, host C surfaces, and runtime loading helpers
 
-**[API Reference →](../api/graft.md)** · **[Source →](https://github.com/nilstate/icey/tree/main/src/graft/)** · **CMake target:** `icey::graft`
+**[API Reference →](../api/graft.md)** · **[Source →](https://github.com/auscaster/icey/tree/main/src/graft/)** · **CMake target:** `icey::graft`
 
 ## Overview
 

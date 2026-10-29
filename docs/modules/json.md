@@ -2,7 +2,7 @@
 
 > JSON serialization, file I/O, and configuration
 
-**[API Reference →](../api/json.md)** · **[Source →](https://github.com/nilstate/icey/tree/main/src/json/)**
+**[API Reference →](../api/json.md)** · **[Source →](https://github.com/auscaster/icey/tree/main/src/json/)**
 
 ## Overview
 

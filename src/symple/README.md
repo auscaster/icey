@@ -2,7 +2,7 @@
 
 Symple v4 server and client for real-time messaging and presence over native WebSocket.
 
-Part of [icey](https://github.com/nilstate/icey). Implements the same protocol as the [JS server](https://github.com/icey/symple-server) and [JS client](https://github.com/icey/symple-client).
+Part of [icey](https://github.com/auscaster/icey). Implements the same protocol as the [JS server](https://github.com/icey/symple-server) and [JS client](https://github.com/icey/symple-client).
 
 ## Features
 
@@ -106,7 +106,7 @@ Direct messages to a peer that doesn't share any room with the sender are silent
 
 ## Protocol
 
-See the [protocol spec](https://github.com/nilstate/symple-docs/blob/main/docs/protocol.md) for the full wire protocol specification.
+See the [protocol spec](https://github.com/auscaster/symple-docs/blob/main/docs/protocol.md) for the full wire protocol specification.
 
 ## Building
 
