@@ -69,7 +69,7 @@ public:
     /// Examples:
     ///     192.168.1.10:80
     ///     [::ffff:192.168.1.120]:2040
-    ///     0state.com:8080
+    ///     auscaster.com:8080
     explicit Address(const std::string& hostAndPort);
 
     /// Destroys the Address.

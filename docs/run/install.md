@@ -9,7 +9,7 @@ Every path to a running `icey-server`. Pick the one that fits your environment.
 The fastest path. No build tools, no system dependencies.
 
 ```bash
-docker run --rm --network host 0state/icey-server:latest
+docker run --rm --network host ghcr.io/auscaster/icey-server:latest
 ```
 
 Open `http://localhost:4500`.
@@ -17,7 +17,7 @@ Open `http://localhost:4500`.
 For production, pin the version:
 
 ```bash
-docker run --rm --network host 0state/icey-server:0.1.1
+docker run --rm --network host ghcr.io/auscaster/icey-server:0.2.6
 ```
 
 If you need to override the mode or source in Docker, use environment variables:
@@ -26,7 +26,7 @@ If you need to override the mode or source in Docker, use environment variables:
 docker run --rm --network host \
   -e ICEY_SOURCE=rtsp://camera.local/stream1 \
   -e ICEY_LOOP=0 \
-  0state/icey-server:0.1.1
+  ghcr.io/auscaster/icey-server:0.2.6
 ```
 
 For config-file-driven bring-up or direct `icey-server` flags, use a native `icey-server` install or the repo-backed `auscaster/icey-server` source path.
@@ -40,7 +40,7 @@ Download a prebuilt binary from the [GitHub releases](https://github.com/auscast
 Linux x86_64:
 
 ```bash
-curl -L https://github.com/auscaster/icey-server/releases/latest/download/icey-server-Linux-x86_64.tar.gz \
+curl -L https://github.com/auscaster/icey-server/releases/download/v0.2.6/icey-server-0.2.6-Linux-x86_64.tar.gz \
   | tar xz
 cd icey-server-*
 ./bin/icey-server --source /path/to/video.mp4
@@ -64,9 +64,9 @@ icey-server --source /path/to/video.mp4
 ::tab{title="APT (Debian/Ubuntu)"}
 
 ```bash
-curl -fsSL https://apt.0state.com/icey/icey-archive-keyring.gpg \
+curl -fsSL https://apt.auscaster.com/icey/icey-archive-keyring.gpg \
   | sudo tee /usr/share/keyrings/icey-archive-keyring.gpg >/dev/null
-curl -fsSL https://apt.0state.com/icey/icey-server.list \
+curl -fsSL https://apt.auscaster.com/icey/icey-server.list \
   | sudo tee /etc/apt/sources.list.d/icey-server.list >/dev/null
 sudo apt update
 sudo apt install icey-server

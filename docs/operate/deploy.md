@@ -10,7 +10,7 @@ How to run `icey-server` in production. Pick the deployment method that fits you
 version: "3.8"
 services:
   icey:
-    image: 0state/icey-server:0.1.1
+    image: ghcr.io/auscaster/icey-server:0.2.6
     network_mode: host
     environment:
       ICEY_MODE: stream
@@ -85,7 +85,7 @@ spec:
     spec:
       containers:
       - name: icey-server
-        image: 0state/icey-server:0.1.1
+        image: ghcr.io/auscaster/icey-server:0.2.6
         ports:
         - containerPort: 4500
           name: http
