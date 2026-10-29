@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ### Fixed
 
+- Make build-machine CPU tuning opt-in so default release binaries run on baseline target CPUs.
 - Validate the current auscaster homepage when rendering tagged openSUSE recipes.
 
 ## [2.5.2] - 2026-10-29
