@@ -157,7 +157,7 @@ jobs:
         env:
           GIT_SSH_COMMAND: ssh -i ~/.ssh/aur -o IdentitiesOnly=yes
         run: |
-          git -C .stage/aur-icey config user.name "0state OSS"
+          git -C .stage/aur-icey config user.name "auscaster OSS"
           git -C .stage/aur-icey config user.email "oss@0state.com"
           git -C .stage/aur-icey add PKGBUILD .SRCINFO
           if git -C .stage/aur-icey diff --cached --quiet; then
