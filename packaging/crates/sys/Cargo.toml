@@ -1,6 +1,6 @@
 [package]
 name = "icey-sys"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 license = "LGPL-2.1-or-later"
 description = "Raw Rust FFI bindings for icey."

@@ -77,14 +77,14 @@ checksum = "0cc23270f6e1808e30a928bdc84dea0b9b4136a8bc82338574f23baf47bbd280"
 
 [[package]]
 name = "icey"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "icey-sys",
 ]
 
 [[package]]
 name = "icey-sys"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "bindgen",
 ]

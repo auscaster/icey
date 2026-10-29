@@ -77,3 +77,58 @@ jobs:
           draft: false
           prerelease: false
           generate_release_notes: false
+
+  publish-crates:
+    needs: release
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Resolve unpublished Rust packages
+        id: packages
+        run: |
+          python3 - <<'PY'
+          import os
+          from pathlib import Path
+          import tomllib
+          from urllib.error import HTTPError
+          from urllib.request import Request, urlopen
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              for directory in ('sys', 'icey'):
+                  package = tomllib.loads((Path('packaging/crates') / directory / 'Cargo.toml').read_text())['package']
+                  url = f"https://crates.io/api/v1/crates/{package['name']}/{package['version']}"
+                  try:
+                      with urlopen(Request(url, headers={'User-Agent': 'icey-release (https://auscaster.com/icey)'}), timeout=30):
+                          publish = False
+                  except HTTPError as error:
+                      if error.code != 404:
+                          raise
+                      publish = True
+                  print(f'{directory}={str(publish).lower()}', file=output)
+          PY
+
+      - uses: actions-rust-lang/setup-rust-toolchain@v1
+        if: steps.packages.outputs.sys == 'true' || steps.packages.outputs.icey == 'true'
+
+      - name: Install binding generator dependencies
+        if: steps.packages.outputs.sys == 'true' || steps.packages.outputs.icey == 'true'
+        run: sudo apt-get update && sudo apt-get install -y libclang-dev
+
+      - uses: rust-lang/crates-io-auth-action@v1
+        if: steps.packages.outputs.sys == 'true' || steps.packages.outputs.icey == 'true'
+        id: auth
+
+      - name: Publish icey-sys
+        if: steps.packages.outputs.sys == 'true'
+        run: cargo publish --locked --manifest-path packaging/crates/sys/Cargo.toml
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ steps.auth.outputs.token }}
+
+      - name: Publish icey
+        if: steps.packages.outputs.icey == 'true'
+        run: cargo publish --locked --manifest-path packaging/crates/icey/Cargo.toml
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ steps.auth.outputs.token }}
