@@ -35,11 +35,20 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Log in to auscaster on Docker Hub
+        uses: docker/login-action@v4
+        with:
+          registry: docker.io
+          username: auscaster
+          password: ${{ secrets.AUSCASTER_DOCKERHUB_TOKEN }}
+
       - name: Extract image metadata
         id: image_meta
         uses: docker/metadata-action@v6
         with:
-          images: ghcr.io/auscaster/icey
+          images: |
+            ghcr.io/auscaster/icey
+            docker.io/auscaster/icey
           labels: |
             org.opencontainers.image.url=https://auscaster.com/icey
           tags: |
@@ -61,13 +70,21 @@ jobs:
         run: |
           docker run --rm "ghcr.io/auscaster/icey:${GITHUB_REF_NAME}" sh -c \
             'test -d /usr/local/include && find /usr/local/lib -name libicy_base.a -type f | grep -q .'
-          docker push "ghcr.io/auscaster/icey:${GITHUB_REF_NAME}"
-          docker push ghcr.io/auscaster/icey:latest
-          version_digest="$(docker buildx imagetools inspect "ghcr.io/auscaster/icey:${GITHUB_REF_NAME}" | awk '/^Digest:/ {print $2; exit}')"
-          latest_digest="$(docker buildx imagetools inspect ghcr.io/auscaster/icey:latest | awk '/^Digest:/ {print $2; exit}')"
-          test -n "$version_digest"
-          test "$version_digest" = "$latest_digest"
-          echo "Verified ghcr.io/auscaster/icey:${GITHUB_REF_NAME} at ${version_digest}"
+          published_digest=""
+          for image in ghcr.io/auscaster/icey docker.io/auscaster/icey; do
+            docker push "${image}:${GITHUB_REF_NAME}"
+            docker push "${image}:latest"
+            version_digest="$(docker buildx imagetools inspect "${image}:${GITHUB_REF_NAME}" | awk '/^Digest:/ {print $2; exit}')"
+            latest_digest="$(docker buildx imagetools inspect "${image}:latest" | awk '/^Digest:/ {print $2; exit}')"
+            test -n "$version_digest"
+            test "$version_digest" = "$latest_digest"
+            if [[ -n "$published_digest" && "$published_digest" != "$version_digest" ]]; then
+              echo "Registry manifests do not match for ${image}" >&2
+              exit 1
+            fi
+            published_digest="$version_digest"
+            echo "Verified ${image}:${GITHUB_REF_NAME} at ${version_digest}"
+          done
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v3

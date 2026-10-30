@@ -27,6 +27,14 @@ Icey Server is released only after its pinned Icey tag is available. Push one `v
 
 Use the server's `scripts/check-distribution.py --strict` for owned-channel drift and its JSON output for the full registry inventory. A failed upstream review or pending Launchpad build is not a completed listing. Content and documentation updates follow their incremental publish path and do not need a runtime image.
 
+## Container publishing
+
+The library and server release jobs each build and smoke-test one image, then push its version and `latest` tags to both GHCR and `docker.io/auscaster`. Both tags and both registries must report the same manifest digest.
+
+Set `AUSCASTER_DOCKERHUB_TOKEN` in the GitHub repository secrets for both `auscaster/icey` and `auscaster/icey-server`. It belongs to the personal Docker account `auscaster`, with repository Read & Write permission, no Delete or Cloud Sandboxes access, and expiration None. This has no scheduled renewal or manual login on routine releases. GHCR continues to use the repository's `GITHUB_TOKEN`.
+
+Keep the existing `DOCKERHUB_USERNAME` and `DOCKERHUB_TOKEN` secrets for the legacy 0state redirect-page job. The current Docker Hub pages use `README.md`; the legacy pages continue to use their dedicated migration documents.
+
 ## Related pages
 
 - [Install](run/install.md)
