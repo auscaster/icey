@@ -4,6 +4,7 @@ on:
   push:
     branches: [main]
     paths:
+      - README.md
       - packaging/legacy-dockerhub.md
       - .github/workflows/dockerhub-page.yml
   workflow_dispatch:
@@ -23,4 +24,17 @@ jobs:
           repository: 0state/icey
           readme-filepath: packaging/legacy-dockerhub.md
           short-description: Icey has moved to ghcr.io/auscaster/icey.
+          enable-url-completion: true
+
+  sync-current:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - uses: peter-evans/dockerhub-description@1b9a80c056b620d92cedb9d9b5a223409c68ddfa
+        with:
+          username: auscaster
+          password: ${{ secrets.AUSCASTER_DOCKERHUB_TOKEN }}
+          repository: auscaster/icey
+          readme-filepath: README.md
+          short-description: ${{ github.event.repository.description }}
           enable-url-completion: true

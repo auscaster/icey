@@ -2,6 +2,8 @@
 
 [Project homepage](https://auscaster.com/icey)
 
+Release images are published at `ghcr.io/auscaster/icey` and `docker.io/auscaster/icey`.
+
 [![CI](https://github.com/auscaster/icey/actions/workflows/ci.yml/badge.svg)](https://github.com/auscaster/icey/actions/workflows/ci.yml)
 [![License: LGPL-2.1+](https://img.shields.io/badge/license-LGPL--2.1%2B-blue.svg)](LICENSE.md)
 
