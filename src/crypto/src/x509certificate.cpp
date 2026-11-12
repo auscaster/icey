@@ -207,12 +207,12 @@ void X509Certificate::save(const std::string& path) const
 void X509Certificate::init()
 {
     char buffer[NAME_BUFFER_SIZE] = {};
-    if (X509_NAME* issuer = X509_get_issuer_name(_certificate.get())) {
+    if (const X509_NAME* issuer = X509_get_issuer_name(_certificate.get())) {
         if (X509_NAME_oneline(issuer, buffer, sizeof(buffer)))
             _issuerName = buffer;
     }
     buffer[0] = '\0';
-    if (X509_NAME* subject = X509_get_subject_name(_certificate.get())) {
+    if (const X509_NAME* subject = X509_get_subject_name(_certificate.get())) {
         if (X509_NAME_oneline(subject, buffer, sizeof(buffer)))
             _subjectName = buffer;
     }
@@ -227,7 +227,7 @@ std::string X509Certificate::commonName() const
 
 std::string X509Certificate::issuerName(NID nid) const
 {
-    if (X509_NAME* issuer = X509_get_issuer_name(_certificate.get())) {
+    if (const X509_NAME* issuer = X509_get_issuer_name(_certificate.get())) {
         char buffer[NAME_BUFFER_SIZE] = {};
         int n = X509_NAME_get_text_by_NID(issuer, nid, buffer, sizeof(buffer));
         if (n < 0)
@@ -240,7 +240,7 @@ std::string X509Certificate::issuerName(NID nid) const
 
 std::string X509Certificate::subjectName(NID nid) const
 {
-    if (X509_NAME* subj = X509_get_subject_name(_certificate.get())) {
+    if (const X509_NAME* subj = X509_get_subject_name(_certificate.get())) {
         char buffer[NAME_BUFFER_SIZE] = {};
         int n = X509_NAME_get_text_by_NID(subj, nid, buffer, sizeof(buffer));
         if (n < 0)
@@ -279,7 +279,7 @@ void X509Certificate::extractNames(std::string& cmnName,
 DateTime X509Certificate::validFrom() const
 {
     const ASN1_TIME* certTime = X509_get0_notBefore(_certificate.get());
-    std::string dateTime(reinterpret_cast<char*>(certTime->data));
+    std::string dateTime(reinterpret_cast<const char*>(ASN1_STRING_get0_data(certTime)));
     int tzd;
     return DateTimeParser::parse("%y%m%d%H%M%S", dateTime, tzd);
 }
@@ -288,7 +288,7 @@ DateTime X509Certificate::validFrom() const
 DateTime X509Certificate::expiresOn() const
 {
     const ASN1_TIME* certTime = X509_get0_notAfter(_certificate.get());
-    std::string dateTime(reinterpret_cast<char*>(certTime->data));
+    std::string dateTime(reinterpret_cast<const char*>(ASN1_STRING_get0_data(certTime)));
     int tzd;
     return DateTimeParser::parse("%y%m%d%H%M%S", dateTime, tzd);
 }
